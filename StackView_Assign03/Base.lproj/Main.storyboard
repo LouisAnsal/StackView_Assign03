@@ -1,24 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StackView_Assign03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="QIl-IR-JRX">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fitness with Friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CN2-0V-tgN">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Barbell" translatesAutoresizingMaskIntoConstraints="NO" id="XuQ-ZX-tnm">
+                                        <rect key="frame" x="0.0" y="43.999999999999986" width="393" height="249.66666666666663"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="qSO-c8-aKc">
+                                        <rect key="frame" x="0.0" y="293.66666666666669" width="393" height="249.66666666666669"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Running" translatesAutoresizingMaskIntoConstraints="NO" id="6iM-gY-Ry9">
+                                        <rect key="frame" x="0.0" y="543.33333333333337" width="393" height="249.66666666666663"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qSO-c8-aKc" firstAttribute="leading" secondItem="QIl-IR-JRX" secondAttribute="leading" id="AUV-g3-tDJ"/>
+                                    <constraint firstItem="XuQ-ZX-tnm" firstAttribute="leading" secondItem="QIl-IR-JRX" secondAttribute="leading" id="PtH-mr-4Je"/>
+                                    <constraint firstAttribute="trailing" secondItem="qSO-c8-aKc" secondAttribute="trailing" id="V4Z-v0-R6m"/>
+                                    <constraint firstItem="CN2-0V-tgN" firstAttribute="centerX" secondItem="QIl-IR-JRX" secondAttribute="centerX" id="WLv-D9-Z6f"/>
+                                    <constraint firstItem="6iM-gY-Ry9" firstAttribute="leading" secondItem="QIl-IR-JRX" secondAttribute="leading" id="Xsd-y3-OAG"/>
+                                    <constraint firstAttribute="trailing" secondItem="6iM-gY-Ry9" secondAttribute="trailing" id="eER-YE-nvA"/>
+                                    <constraint firstAttribute="trailing" secondItem="XuQ-ZX-tnm" secondAttribute="trailing" id="sxm-rd-d4v"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="QIl-IR-JRX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jg8-2v-Jyh"/>
+                            <constraint firstAttribute="bottom" secondItem="QIl-IR-JRX" secondAttribute="bottom" id="QBB-Jy-fmw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QIl-IR-JRX" secondAttribute="trailing" id="bMd-CD-VxT"/>
+                            <constraint firstItem="QIl-IR-JRX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kca-WL-xm7"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Barbell" width="413" height="230"/>
+        <image name="Beach" width="414" height="230"/>
+        <image name="Running" width="414" height="230"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
